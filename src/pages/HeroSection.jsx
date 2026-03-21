@@ -82,8 +82,8 @@ function HeroSection() {
           </div>
           <div className="resume">
             <a
-              href="pdf/Arpit_Tripathi_resume.pdf"
-              download="Arpit_Tripathi_resume.pdf"
+              href="pdf/Arpit_Tripathi_Software_Developer_Resume.pdf"
+              download="Arpit_Tripathi_Software_Developer_Resume.pdf"
               rel="noopener noreferrer"
               target="_blank"
             >
