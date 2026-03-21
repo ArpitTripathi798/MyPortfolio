@@ -11,7 +11,7 @@ function ProjectSection() {
 
         {/* 🔥 AI Resume Analyzer */}
         <ProjectCard
-          imageLink="https://raw.githubusercontent.com/ArpitTripathi798/MyPortfolio/main/images/Ai-resume.jpg"
+          imageLink="/Images/Ai-resume.jpg"
           title="AI Resume Analyzer"
           description="AI-powered app that analyzes resumes and matches jobs using Gemini API."
           github="https://github.com/ArpitTripathi798/Ai-Resume-Analyzer"
@@ -20,7 +20,7 @@ function ProjectSection() {
 
         {/* 🔗 URL Shortener */}
         <ProjectCard
-          imageLink="https://raw.githubusercontent.com/ArpitTripathi798/MyPortfolio/main/images/Url.jpg"
+          imageLink="/Images/Url.jpg"
           title="URL Shortener"
           description="Full-stack URL shortener with custom alias and fast redirection."
           github="https://github.com/ArpitTripathi798/Url-shortner"
@@ -29,7 +29,7 @@ function ProjectSection() {
 
         {/* 📌 Job Application Tracker */}
         <ProjectCard
-          imageLink="https://raw.githubusercontent.com/ArpitTripathi798/MyPortfolio/main/images/Job.jpg"
+          imageLink="/Images/Job.jpg"
           title="Job Application Tracker"
           description="Track job applications with dashboard and authentication."
           github="https://github.com/ArpitTripathi798/Job-Tracker"
