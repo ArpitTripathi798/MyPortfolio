@@ -1,37 +1,43 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import { motion } from "motion/react";
 
 function ProjectSection() {
   return (
-    <>
-      <div className="text-white mt-20 md:mt-0 w-[90%] mx-auto">
-        <h1 className="lora-font text-5xl italic text-center">Projects</h1>
-        <div className="mt-20 md:mt-0 space-y-10 md:space-y-0 md:p-20 flex justify-around flex-wrap">
-          <ProjectCard
-            imageLink="Images/weatherProject.png"
-            title="Weather App"
-            description="A Weather app using React JS and openWeatherMap API. This was my first app after learning Reactjs"
-            github="Your_gitHub link"
-            liveDemo=""
-          />
-          <ProjectCard
-            imageLink="Images/Homigo.png"
-            title="Homigo"
-            description="Built a full-stack, server-side rendered property listing platform using Node.js, Express.js, and MongoDB."
-            github="Your_GitHub repo link"
-            liveDemo="Website_Live_link"
-          />
-          <ProjectCard
-            imageLink="Images/Chatably.png"
-            title="A Real-time Chat App"
-            description="Built a full-stack, real-time chat application using React, Node.js, and Socket.io for instant user-to-user messaging."
-            github="Your_GitHub Repo Link"
-            liveDemo="Website Live Link"
-          />
-        </div>
+    <div className="text-white mt-20 md:mt-0 w-[90%] mx-auto">
+      
+      <h1 className="lora-font text-5xl italic text-center">Projects</h1>
+
+      <div className="mt-20 md:mt-0 space-y-10 md:space-y-0 md:p-20 flex justify-around flex-wrap">
+
+        {/* 🔥 AI Resume Analyzer */}
+        <ProjectCard
+          imageLink="https://raw.githubusercontent.com/ArpitTripathi798/MyPortfolio/main/images/Ai-resume.jpg"
+          title="AI Resume Analyzer"
+          description="AI-powered app that analyzes resumes and matches jobs using Gemini API."
+          github="https://github.com/ArpitTripathi798/Ai-Resume-Analyzer"
+          liveDemo="https://ai-resume-analyzer-nu-lemon.vercel.app/"
+        />
+
+        {/* 🔗 URL Shortener */}
+        <ProjectCard
+          imageLink="https://raw.githubusercontent.com/ArpitTripathi798/MyPortfolio/main/images/Url.jpg"
+          title="URL Shortener"
+          description="Full-stack URL shortener with custom alias and fast redirection."
+          github="https://github.com/ArpitTripathi798/Url-shortner"
+          liveDemo="https://url-shortner-khaki-ten.vercel.app/"
+        />
+
+        {/* 📌 Job Application Tracker */}
+        <ProjectCard
+          imageLink="https://raw.githubusercontent.com/ArpitTripathi798/MyPortfolio/main/images/Job.jpg"
+          title="Job Application Tracker"
+          description="Track job applications with dashboard and authentication."
+          github="https://github.com/ArpitTripathi798/Job-Tracker"
+          liveDemo="https://job-tracker-two-ivory.vercel.app/"
+        />
+
       </div>
-    </>
+    </div>
   );
 }
 
