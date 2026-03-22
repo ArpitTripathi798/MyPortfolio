@@ -7,21 +7,38 @@ function ProjectCard({ imageLink, title, description, github, liveDemo }) {
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      whileHover={{scale: 1.02}}
+      whileHover={{ scale: 1.03 }}
       viewport={{ once: true }}
-      className="w-[90%] md:w-[30%] bg-black/80 rounded-2xl ring-3 ring-black/50"
+      className="w-[90%] md:w-[30%] bg-black/80 rounded-2xl ring-1 ring-white/10 overflow-hidden shadow-lg"
     >
-      <img src={imageLink} alt="app image" className="rounded-t-2xl" />
-      <div className="p-3 text-white">
-        <h1 className="my-3 text-2xl">{title}</h1>
-        <p className="text-sm">{description}</p>
-        <div className="my-4 space-x-2">
-          <a href={github} className="py-2 px-2 text-sm bg-white/10 rounded-xl">
+      
+      {/* ✅ Image Fix */}
+      <img
+        src={imageLink}
+        alt="project"
+        className="w-full h-48 object-cover"
+      />
+
+      <div className="p-4 text-white">
+        <h1 className="my-2 text-xl font-semibold">{title}</h1>
+
+        <p className="text-sm text-gray-300">{description}</p>
+
+        <div className="mt-4 flex gap-3">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1 text-sm bg-white/10 rounded-lg hover:bg-blue-500 transition"
+          >
             GitHub
           </a>
+
           <a
             href={liveDemo}
-            className="py-2 px-2 text-sm bg-white/10 rounded-xl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1 text-sm bg-white/10 rounded-lg hover:bg-green-500 transition"
           >
             Live Demo
           </a>
