@@ -9,17 +9,17 @@ function ProjectCard({ imageLink, title, description, github, liveDemo }) {
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.03 }}
       viewport={{ once: true }}
-      className="w-[90%] md:w-[30%] bg-black/80 rounded-2xl ring-1 ring-white/10 overflow-hidden shadow-lg"
+      className="w-[90%] md:w-[30%] bg-black/80 rounded-2xl ring-1 ring-white/10 shadow-lg p-2"
     >
-      
-      {/* ✅ Image Fix */}
+      {/* ✅ Image */}
       <img
         src={imageLink}
         alt="project"
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover rounded-xl"
       />
 
-      <div className="p-4 text-white">
+      {/* ✅ Content */}
+      <div className="p-3 text-white">
         <h1 className="my-2 text-xl font-semibold">{title}</h1>
 
         <p className="text-sm text-gray-300">{description}</p>
