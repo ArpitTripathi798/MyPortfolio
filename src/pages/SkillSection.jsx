@@ -42,7 +42,7 @@ function SkillSection() {
     { icon: <SiMysql className="text-blue-600" />, name: "MySQL" },
     { icon: <FaDatabase className="text-gray-400" />, name: "SQL" },
 
-    // DevOps / Tools
+    // Tools
     { icon: <FaGitAlt className="text-red-500" />, name: "Git" },
     { icon: <FaGithub className="text-white" />, name: "GitHub" },
     { icon: <SiRender className="text-indigo-500" />, name: "Render" },
@@ -51,10 +51,11 @@ function SkillSection() {
   return (
     <div className="w-[90%] mx-auto md:p-20 mt-20 text-white">
       
+      {/* Heading */}
       <motion.div
-        initial={{ opacity: 0, y: 200 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
         <h1 className="text-5xl lora-font italic mb-10 text-center">
@@ -62,16 +63,36 @@ function SkillSection() {
         </h1>
       </motion.div>
 
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-6">
+      {/* Skills Grid */}
+      <motion.div
+        className="grid grid-cols-3 md:grid-cols-5 gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+      >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 200 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.2 }}
-            transition={{ duration: 0.4 }}
-            viewport={{ once: true }}
-            className="rounded-xl p-4 flex flex-col items-center bg-white/5 hover:bg-white/10 transition"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                  ease: "easeOut",
+                },
+              },
+            }}
+            whileHover={{ scale: 1.15 }}
+            className="rounded-xl p-4 flex flex-col items-center bg-white/5 hover:bg-white/10 transition duration-300"
           >
             <div className="mb-3 text-3xl md:text-5xl">
               {skill.icon}
@@ -79,7 +100,7 @@ function SkillSection() {
             <p className="text-sm md:text-lg">{skill.name}</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
